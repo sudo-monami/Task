@@ -1,0 +1,16 @@
+<h2>タスク詳細</h2>
+
+<div>
+  <p>作業開始日</p>
+  <%= @task.start_work %>
+</div>  
+<div>
+  <p>作業終了予定日</p>
+  <%= @task.end_work_prospect %>
+</div>
+<div>
+  <p>作業終了日</p>
+  <%= @task.end_work %>
+</div>
+
+<%= link_to "戻る", tasks_path %>

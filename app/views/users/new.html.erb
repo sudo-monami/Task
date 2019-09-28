@@ -1,0 +1,22 @@
+<div>新規登録</div>
+
+<div>
+  <%= form_for @user do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email%>
+    </div>
+    <div>
+      <%= f.label :password %>
+      <%= f.text_field :password%>
+    </div>
+      <%= f.label :password_confirmation %>
+      <%= f.text_field :password_confirmation %>
+    </div>
+    <%= f.submit "送信" %>
+  <% end %>
+</div>

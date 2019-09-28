@@ -1,0 +1,21 @@
+
+<h1>タスク編集</h1>
+
+<%= form_for(@task) do |f| %>
+  <div>
+    <%= f.label :title, "タイトル" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :explanation, "説明"%>
+    <%= f.text_area :explanation%>
+  </div>
+  <div>
+    <%= f.label :priority, "優先度"%>
+    <%= f.select :priority, [["低", "低"], ["高", "高"]]%>
+  </div>
+  <div>
+  </div>
+  <div><%= f.submit "更新" %></div>
+<% end %>
+<%= link_to '戻る', tasks_path %>

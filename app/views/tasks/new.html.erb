@@ -1,0 +1,35 @@
+<h2>タスクを追加</h2>
+
+<div>
+  <%= form_for @task do |f| %>
+    <div>
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :explanation, "説明" %>
+      <%= f.text_area :explanation %>
+    </div>
+    <div>
+      <%= f.label :start_work, "作業開始日" %>
+      <%= f.text_field :start_work %>
+    </div>
+    <div>
+      <%= f.label :end_work_prospect, "作業終了予定日" %>
+      <%= f.text_field :end_work_prospect %>
+    </div>
+    <div>
+      <%= f.label :priority, "優先度" %>
+      <%= f.select :priority, Task.priorities.keys %>
+    </div>
+    <div>
+      <%= f.label :status, "ステータス" %>
+      <%= f.select :status, [["未着手", "未着手"]] %>
+    </div>
+    
+    
+    <%= f.submit "送信" %>
+  <% end %>
+  
+  <%= link_to "戻る", tasks_path %>
+</div>
